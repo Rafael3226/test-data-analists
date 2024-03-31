@@ -24,8 +24,7 @@ def new_controller():
     """
         Se crea una instancia del controlador
     """
-    #TODO: Llamar la función del controlador donde se crean las estructuras de datos
-    pass
+    return controller.new_controller()
 
 
 def print_menu():
@@ -40,7 +39,10 @@ def load_data(control):
     """
     Carga los datos
     """
-    #TODO: Realizar la carga de datos
+    control.load_data(control,'Data/small-employments_types.csv')
+    control.load_data(control,'Data/small-jobs.csv')
+    control.load_data(control,'Data/small-multilocations.csv')
+    control.load_data(control,'Data/small-skills.csv')
     pass
 
 
@@ -48,14 +50,14 @@ def print_data(control, id):
     """
         Función que imprime un dato dado su ID
     """
-    #TODO: Realizar la función para imprimir un elemento
+    print(control.get_data(control,id))
     pass
 
 def print_req_1(control):
     """
         Función que imprime la solución del Requerimiento 1 en consola
     """
-    # TODO: Imprimir el resultado del requerimiento 1
+    print(control.req_1())
     pass
 
 
@@ -63,7 +65,7 @@ def print_req_2(control):
     """
         Función que imprime la solución del Requerimiento 2 en consola
     """
-    # TODO: Imprimir el resultado del requerimiento 2
+    print(control.req_2())
     pass
 
 
