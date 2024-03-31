@@ -11,6 +11,7 @@ from DISClib.DataStructures import mapentry as me
 assert cf
 from tabulate import tabulate
 import traceback
+import data as d
 
 """
 La vista se encarga de la interacción con el usuario
@@ -39,10 +40,10 @@ def load_data(control):
     """
     Carga los datos
     """
-    control.load_data(control,'Data/small-employments_types.csv')
-    control.load_data(control,'Data/small-jobs.csv')
-    control.load_data(control,'Data/small-multilocations.csv')
-    control.load_data(control,'Data/small-skills.csv')
+    control.load_data(control,d.get_csv_data('employment_types' ,'small'))
+    control.load_data(control,d.get_csv_data('jobs'             ,'small'))
+    control.load_data(control,d.get_csv_data('multilocations'   ,'small'))
+    control.load_data(control,d.get_csv_data('skills'           ,'small'))
     pass
 
 
