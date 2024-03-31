@@ -15,16 +15,27 @@ def new_controller():
     Crea una instancia del modelo
     """
     #TODO: Llamar la función del modelo que crea las estructuras de datos
+    return {
+        'data_structs': model.new_data_structs()
+    }
     pass
 
 
 # Funciones para la carga de datos
 
-def load_data(control, filename):
+def load_data(control, file_data):
     """
     Carga los datos del reto
     """
     # TODO: Realizar la carga de datos
+    with open(file_data['file_name'], 'r') as file:
+        reader = csv.DictReader(file, delimiter=';', fieldnames=file_data['field_names'])
+        for row in reader:
+            model.add_data(
+                control['data_structs'], 
+                file_data['data_struct_name'], 
+                { 'key':row[file_data['key']], 'value': row }
+            )
     pass
 
 

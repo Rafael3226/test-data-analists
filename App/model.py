@@ -25,28 +25,32 @@ def new_data_structs():
     manera vacía para posteriormente almacenar la información.
     """
     #TODO: Inicializar las estructuras de datos
+    return {
+        'jobs': mp.newMap(0),
+        'employments': mp.newMap(0),
+        'multilocations': mp.newMap(0),
+        'skills': mp.newMap(0)
+    }
+
+# Funciones para creacion de datos
+
+def new_data(data_structs, id, info):
+    """
+    Crea una nueva estructura para modelar los datos
+    """
+    #TODO
     pass
 
 
 # Funciones para agregar informacion al modelo
 
-def add_data(data_structs, data):
+def add_data(data_structs, id, info):
     """
     Función para agregar nuevos elementos a la lista
     """
     #TODO: Crear la función para agregar elementos a una lista
+    mp.put(data_structs[id],info['key'],info['value'])
     pass
-
-
-# Funciones para creacion de datos
-
-def new_data(id, info):
-    """
-    Crea una nueva estructura para modelar los datos
-    """
-    #TODO: Crear la función para estructurar los datos
-    pass
-
 
 # Funciones de consulta
 

@@ -9,7 +9,7 @@ from DISClib.ADT import queue as qu
 from DISClib.ADT import map as mp
 from DISClib.DataStructures import mapentry as me
 assert cf
-from tabulate import tabulate
+#from tabulate import tabulate
 import traceback
 import data as d
 
@@ -40,10 +40,10 @@ def load_data(control):
     """
     Carga los datos
     """
-    control.load_data(control,d.get_csv_data('employment_types' ,'small'))
-    control.load_data(control,d.get_csv_data('jobs'             ,'small'))
-    control.load_data(control,d.get_csv_data('multilocations'   ,'small'))
-    control.load_data(control,d.get_csv_data('skills'           ,'small'))
+    controller.load_data(control,d.get_csv_data('employment_types' ,'small'))
+    controller.load_data(control,d.get_csv_data('jobs'             ,'small'))
+    controller.load_data(control,d.get_csv_data('multilocations'   ,'small'))
+    controller.load_data(control,d.get_csv_data('skills'           ,'small'))
     pass
 
 
